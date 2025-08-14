@@ -25,7 +25,7 @@ So after watching some youtube videos, I found that the long bar and short bar u
 That might be confusing, so let me explain that graphically:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1f2ef984-af54-4bae-a6f9-a458d3fd4cfc" width="800"><br>The concept.
+  <img src="https://github.com/user-attachments/assets/1f2ef984-af54-4bae-a6f9-a458d3fd4cfc" width="800"><br>The concept
 </p>
 
 If we can measure the time that the plane is intact (the time-of-flight), we can calculate the vertical jump. For example, if my time-of-flight is 0.7 seconds, plugging that into the equation gives a vertical of 0.6008 meters. Converting that to inches (because I'm American), gives a vertical of 23.6 inches. So the goal is to build a device that can measure this time-of-flight.
