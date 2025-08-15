@@ -1,9 +1,9 @@
 # jump
 Made by: @luteron6
 
-Total hours so far: 3 hours
+Total hours so far: 5 hours
 
-Estimated Cost: $66.55 (plus tax and shipping)
+Estimated Cost: $$69.50 (plus tax and shipping)
 
 ## Day 1 - 8/14/2025 - 3:15 PM (1 hour)
 ### Background
@@ -30,7 +30,7 @@ The explanation above of the OVR Jump might be confusing, so let me explain that
 
 If we can measure the time-of-flight (TOF), we can calculate the vertical jump. We know the TOF occurs when the device can no longer see the user's feet and the plane is unbroken. In other words, we measure the time between broken planes. For example, if my feet disappear (from the perspective of the device) for 0.7 seconds, my TOF is 0.7 seconds. Plugging that into the equation above gives a vertical of 0.6008 meters. Converting that to inches (because I'm American), gives a vertical of 23.6 inches. So the goal of this project is to build a device that can measure this time-of-flight.
 
-## Day 2 - 8/15/2025 - 9:54 (2 hours)
+## Day 2 - 8/15/2025 - 9:54 AM (2 hours)
 So today I've been looking for parts to make the actual laser curtain device. I found these [IR Break Beam Sensors](https://www.adafruit.com/product/2168) from Adafruit:
 
 <p align="center">
@@ -79,3 +79,25 @@ So the items I need to add to the BOM are:
 * [Adafruit MiniBoost 5V @ 1A](https://www.adafruit.com/product/4654): $3.95
 * 0.96" OLED Display: already owned (~$2.50)
 * Total Estimated Cost: $66.55 (plus tax and shipping)
+
+## Day 2 - 8/15/2025 - 1:58 PM (2 hours)
+Ok I was working on my diagram/schematic and looking at the pinout of the charging board on the IR transmitter module. Apparently the 5V pin is a breakout of the USB-C port, and not a step-up converter from the battery. So I'll need two MiniBoost modules.
+* another MiniBoost module: $3.95
+* Total Estimated Cost: $69.50
+### IR Transmitter Schematic
+Anyway here's what I came up with for the IR transmitter schematic:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c4755dcc-2412-4dab-b0b3-6d1b3635ec03" width="900"><br>The IR Transmitter
+</p>
+
+Basically, the battery is charged by the module, which also powers the MiniBoost. The MiniBoost is turned on and off by the latching switch. The MiniBoost, when turned on, powers the IR transmitters.
+
+### IR Receiver Schematic
+On the receiving side is the brains of everything:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c0111c15-4174-4f32-b99f-5e7c09718314" width="900"><br>The IR Receiver
+</p>
+
+Again, the battery powers the whole system. The switch controls the power for the whole system, to prevent unecessary draining of the battery. The battery is charged by the RP2040 board, which will also run the CircuitPython code. The IR receivers, powered by the MiniBoost, will connect their signal wire to one of the inputs on the RP2040. The RP2040 will also control the 0.96" OLED for displaying stats. I think everything will be soldered directly with wires, so there will be no need for a PCB. I just need to work on the case and code now.
