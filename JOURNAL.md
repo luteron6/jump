@@ -70,6 +70,7 @@ If I stick to Adafruit, I found the [Adafruit Feather RP2040](https://www.adafru
 <p align="center">
   <img src="https://cdn-shop.adafruit.com/970x728/4884-07.jpg" width="400"><br>Adafruit Feather RP2040
 </p>
+
 It has can charge a battery via the USB-C port, so I won't have to get another charging board. It'll also need another battery and on/off switch. However, Adafruit suggests the IR be powered with 5v, so I need some sort of step-up. I found [this one](https://www.adafruit.com/product/4654/).
 It also needs a 0.96" OLED display, and I have one already.
 So the items I need to add to the BOM are:
