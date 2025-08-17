@@ -3,7 +3,7 @@ Made by: @luteron6
 
 Total hours so far: 5 hours
 
-Estimated Cost: $$69.50 (plus tax and shipping)
+Estimated Cost: $69.50 (plus tax and shipping)
 
 ## Day 1 - 8/14/2025 - 3:15 PM (1 hour)
 ### Background
